@@ -213,3 +213,47 @@ func TestProductFields(t *testing.T) {
 		}
 	}
 }
+
+func TestGetProductsContentType(t *testing.T) {
+	req := httptest.NewRequest(
+		http.MethodGet,
+		"/products",
+		nil,
+	)
+
+	w := httptest.NewRecorder()
+
+	GetProducts(w, req)
+
+	ct := w.Header().Get(ContentTypeHeader)
+
+	if ct != ApplicationJSON {
+		t.Errorf(
+			"expected %s got %s",
+			ApplicationJSON,
+			ct,
+		)
+	}
+}
+
+func TestHealthCheckContentType(t *testing.T) {
+	req := httptest.NewRequest(
+		http.MethodGet,
+		"/health",
+		nil,
+	)
+
+	w := httptest.NewRecorder()
+
+	HealthCheck(w, req)
+
+	ct := w.Header().Get(ContentTypeHeader)
+
+	if ct != ApplicationJSON {
+		t.Errorf(
+			"expected %s got %s",
+			ApplicationJSON,
+			ct,
+		)
+	}
+}

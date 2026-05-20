@@ -1,0 +1,14 @@
+mode: set
+shop-api/handlers.go:61.58,63.60 2 1
+shop-api/handlers.go:63.60,66.3 2 0
+shop-api/handlers.go:69.61,74.16 4 1
+shop-api/handlers.go:74.16,77.3 2 1
+shop-api/handlers.go:79.2,79.69 1 1
+shop-api/handlers.go:79.69,82.3 2 1
+shop-api/handlers.go:84.2,84.27 1 1
+shop-api/handlers.go:84.27,87.3 2 1
+shop-api/handlers.go:89.2,100.60 4 1
+shop-api/handlers.go:100.60,103.3 2 0
+shop-api/handlers.go:106.58,108.85 2 1
+shop-api/handlers.go:108.85,111.3 2 0
+shop-api/main.go:11.13,31.2 8 0

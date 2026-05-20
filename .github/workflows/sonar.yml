@@ -20,11 +20,12 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: '1.21'
-
+          
       - name: Run tests
         run: |
           cd server
           go test ./... -coverprofile=coverage.out
+          ls -la
 
       - name: Sonar Scan
         uses: SonarSource/sonarqube-scan-action@master

@@ -17,6 +17,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Run tests
+        run: |
+          cd server
+          go test ./... -coverprofile=coverage.out
+
       - name: Sonar Scan
         uses: SonarSource/sonarqube-scan-action@master
         env:

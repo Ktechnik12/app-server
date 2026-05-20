@@ -83,8 +83,7 @@ func ProcessPayment(w http.ResponseWriter, r *http.Request) {
 
 	orders = append(orders, order)
 
-	log.Printf("Nowe zamówienie od %s %s, razem: %.2f zł",
-		order.Customer.FirstName, order.Customer.LastName, order.Total)
+	log.Printf("Nowe zamówienie przyjęte")
 
 	response := map[string]interface{}{
 		"success": true,

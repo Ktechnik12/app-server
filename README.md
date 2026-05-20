@@ -9,5 +9,3 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Ktechnik12_app-server&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Ktechnik12_app-server)
 
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Ktechnik12_app-server&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Ktechnik12_app-server)
-
-REST API application in Go.

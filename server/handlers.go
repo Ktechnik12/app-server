@@ -6,6 +6,11 @@ import (
 	"net/http"
 )
 
+const (
+	ContentTypeHeader = "Content-Type"
+	ApplicationJSON   = "application/json"
+)
+
 var products = []Product{
 	{
 		ID:          1,
@@ -54,7 +59,7 @@ var products = []Product{
 var orders []Order
 
 func GetProducts(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set(ContentTypeHeader, ApplicationJSON)
 	if err := json.NewEncoder(w).Encode(products); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -62,7 +67,7 @@ func GetProducts(w http.ResponseWriter, r *http.Request) {
 }
 
 func ProcessPayment(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set(ContentTypeHeader, ApplicationJSON)
 
 	var order Order
 	err := json.NewDecoder(r.Body).Decode(&order)
@@ -99,7 +104,7 @@ func ProcessPayment(w http.ResponseWriter, r *http.Request) {
 }
 
 func HealthCheck(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set(ContentTypeHeader, ApplicationJSON)
 	if err := json.NewEncoder(w).Encode(map[string]string{"status": "ok"}); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

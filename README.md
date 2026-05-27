@@ -10,7 +10,7 @@
 
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Ktechnik12_app-server&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Ktechnik12_app-server)
 
-
+Obraz: https://hub.docker.com/repository/docker/ktechnik/zad7-server/general
 
 :white_check_mark: 3.0 Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w hookach gita
 
